@@ -1,0 +1,908 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Contenedor padre */
+.container {
+    display: grid;
+    grid-template-areas: "nav"
+                         "header"
+                         "main"
+                         "footer";
+    grid-template-rows: .15fr .6fr auto .25fr;
+
+}
+
+/* Estilos nav */
+
+nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4em;
+    padding: 1em 0;
+}
+
+/* Logo */
+nav > a > img {
+    width: 20em;
+}
+
+/*Menu de navegacion */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    color: #E9B872;
+}
+
+nav > ul > li > a > img {
+    width: 1em;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.burgerSubMenu {
+    display: none;
+}
+
+/* Estilos header */
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header img {  
+    width: 100%;
+}
+
+/* Elementos main */
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.boton {
+    background-color: #E9B872;
+    text-align: center;
+    color: white;
+    border-radius: .2em;
+    text-decoration: none;
+    border: #ffffff00 2px solid;
+}
+
+.boton:hover {
+    border: #ffffff 2px solid;
+}
+
+/* Elementos de section */
+
+section {
+    margin: 3em 4em;
+}
+
+section h2 {
+    font-size: 3em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+section h3 {
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+section p {
+    text-align: justify;
+    font-weight: lighter;
+    padding: 2em 0;
+}
+
+.sectionTitle {
+    grid-area: titulo;
+    align-self: flex-end;
+}
+
+.sectionMedia {
+    grid-area: media;
+    width: 30em;
+    min-height: 20em;
+    justify-self: center;
+    align-self: center;
+} 
+
+.video {
+    min-height: 15em;
+}
+
+.sectionContent {
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionContent .boton {
+    width: 50%;
+    margin: 5% 0;
+    padding: .5em 0;
+}
+
+
+/*  Secciones
+
+    >sectionRight/Left contienen una imagen
+    >sectionMediaRight/Left contienen multimedia (videos, mapas) */
+
+/* Seccciones con contenido a la derecha */
+.sectionRight {
+    display: grid;
+    grid-template-areas: "titulo media"
+                         "contenido media";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 10%;
+}
+
+.sectionMediaRight {
+    display: grid;
+    grid-template-areas: "titulo media"
+                         "contenido media";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 10%;
+}
+
+/* Seccciones con contenido a la izquierda */
+.sectionLeft {
+    display: grid;
+    grid-template-areas: "media titulo"
+                         "media contenido";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 10%;
+}
+
+.sectionMediaLeft {
+    display: grid;
+    grid-template-areas: "media titulo"
+                         "media contenido";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 10%;
+}
+
+/* Secciones con solo texto */
+.sectionText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Secciones con pestañas */
+.sectionTab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sectionTab h2 {
+    margin: 1em 0;
+}
+
+.sectionTab ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.sectionTab ul li {
+    width: 7em;
+    padding: .5em;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.sectionTab ul li:hover {
+    border-bottom: 2px solid #E9B872;
+}
+
+/* Seccion comentarios de la comunidad */
+.sectionComments {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.10);
+    min-height: 60vh;
+    padding: 2em 0;
+    margin: 2em 0;
+}
+
+/* usuarios */
+.sectionComments ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    height: 10em;
+}
+
+.sectionComments ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionComments>ul>li>img {
+    width: 8em;
+}
+
+/* comentarios de usuarios */
+.comments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.comments img {
+    width: 3em;
+    opacity: 30%;
+}
+
+.comments p {
+    width: 60%;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Formularios */
+
+form {
+    min-height: 40em;
+    width: 100%;
+}
+
+/* Formulario de contacto */
+.contactForm {
+    height: 100%;
+    background-image: url("../images/formulario.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+    padding: 0 4em;
+}
+
+.contactForm h3 {
+    letter-spacing: .1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Mulish', sans-serif;
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+.contactForm label {
+    font-weight: 200;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1em;
+    opacity: 80%;
+}
+
+/* formulario de registro (cambio de fondo) */
+.registro {
+    background-image: url("../images/formularioRegistro.jpg");
+    background-position: center;
+}
+
+/*Elementos de formularios */
+.textInput {
+    border-radius: 5px;
+    border: none;
+    width: 30em;
+    padding: .4em;
+    margin: 1em 0;
+    color: white;
+    background-color: #1E212B;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    resize: none;
+}
+
+.submit {
+    border-radius: 5px;
+    background-color: #E9B872;
+    color: white;
+    border: none;
+    width: 20em;
+    padding: 10px 0;
+    border: #1e212b00 1px solid;
+    margin: 1em 0;
+}
+
+.submit:hover {
+    font-weight: 600;
+    border: white 1px solid;
+}
+
+/* Estilos footer */
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    background-color: #1E212B;
+    justify-content: space-between;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* Contenedor de elementos de footer */ 
+.contenidoFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15%;
+    height: 10em;
+}
+/* Mapa de sitio */
+.mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: lighter;
+}
+
+.mapa li a {
+    font-size: .8em;
+}
+
+.mapa li a:hover {
+    color: rgb(196, 196, 196);;
+}
+
+/* Links a redes sociales */
+.redesSociales {
+    display: flex;
+    width: 10em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.redesSociales img {
+    width: 2em;
+}
+
+/* Estilos socalo de copyright */
+.copyright {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+    padding: .5em 4em;
+}
+
+.copyright p{
+    font-size: .6em;
+    letter-spacing: .05em;
+}
+
+/* Media queries */
+
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    .container {
+        display: grid;
+        grid-template-areas: "nav"
+                             "header"
+                             "main"
+                             "footer";
+        grid-template-rows: .15fr 1fr auto .25fr;
+    
+    }
+
+    /* Nav */
+
+    nav{
+        margin: 0 2em;
+    }
+    nav ul {
+        display: none;
+    }
+
+    nav > a > img {
+        width: 10em;
+    }
+
+    /* Menu hamburguesa */
+    .burgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5em;
+    }
+
+    .burgerMenu img {
+        width: 2em;
+    }
+    
+    .burgerMenu:hover .burgerSubMenu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .burgerMenu:focus .burgerSubMenu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .burgerSubMenu > li {
+        width: 100%;
+        font-size: .8em;
+        background-color: black;
+        padding: .8em .2em;
+    }
+
+    .burgerSubMenu li a:hover {
+        color: #E9B872;
+    }
+
+
+    /* Main */
+
+    main {
+        margin: 0em 0;
+    }
+
+    /* Elementos section */
+    section {
+        margin: 2em 2em;
+    }
+
+    section h2 {
+        font-size: 2.5em;
+        text-align: center;
+
+    }
+    
+    section h3 {
+        font-size: 1.5em;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    
+    .sectionTitle {
+        text-align: center;
+    }
+
+    .sectionContent {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionMedia {
+        grid-area: media;
+        width: 100%;
+        min-height: 20em;
+        justify-self: center;
+        align-self: center;
+    } 
+
+    /* Section contenido a la derecha */
+    .sectionRight {
+        display: grid;
+        grid-template-areas: "titulo"
+                             "contenido";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .sectionMediaRight {
+        grid-template-areas: "titulo"
+                             "contenido"
+                             "media";
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr 2fr;
+    }
+
+    .sectionRight img {
+        display: none;
+    }
+
+    /* Section contenido a la izquierda */
+    .sectionLeft {
+        display: grid;
+        grid-template-areas: "titulo"
+                             "contenido";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .sectionLeft img {
+        display: none;
+    }
+
+    /*Seccion comunidad */
+    .sectionComments {
+        margin: 2em 0;
+    }
+
+    .sectionComments ul {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+    
+    .sectionComments>ul>li>img {
+        width: 5.5em;
+    }
+
+    .sectionComments>ul>li>label {
+        display: none;
+    }
+
+    /* Imagenes de usuarios (prescindibles en pantallas mas pequeñas) */
+    #user4 {
+        display: none;
+    }
+
+    #user5 {
+        display: none;
+    }
+
+    /*Comentarios de los usuarios */
+    .comments {
+        justify-content: center;
+    }
+    
+    .comments img {
+        width: 1em;
+        margin: .5em;
+    }
+
+    .comments p {
+        width: 80%;
+        text-align: justify;
+        font-weight: 400;
+    }
+
+    /*Secciones pestañas */
+    .sectionTab ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+
+    .sectionTab ul li {
+        width: 4em;
+        justify-self: center;
+        align-self: center;
+        justify-items: center;
+    }
+
+    /* formularios */
+    form {
+        width: 100%;
+    }
+
+    .textInput {
+        width: 15em;
+    }
+
+    .submit {
+        width: 15em;
+    }
+
+    /* Formulario de contacto */
+    .contactForm {
+    align-items: center;
+    }
+
+    .contactForm h3 {
+        text-align: center;
+    }
+
+    /* footer */
+
+    .redesSociales {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .copyright {
+        padding: .5em 2em;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-size: .4em;
+    }
+    
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    .container {
+        grid-template-rows: .15fr .8fr auto .25fr;
+    }
+
+    /* Nav */
+
+    nav{
+        margin: 0 3em;
+    }
+    nav ul {
+        display: none;
+    }
+
+    nav > a > img {
+        width: 15em;
+    }
+
+    /* Menu hamburguesa */
+    .burgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5em;
+    }
+    
+    .burgerMenu img {
+        width: 2em;
+    }
+        
+    .burgerMenu:hover .burgerSubMenu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: auto;
+    }
+    
+    .burgerMenu:focus .burgerSubMenu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    
+    .burgerSubMenu > li {
+        width: 100%;
+        font-size: .8em;
+        background-color: black;
+        padding: .8em .4em;
+    }
+    
+    /* Main */
+
+    main {
+        margin: 0em 0;
+    }
+
+    /* Elementos de secciones */
+    section {
+        margin: 2em 3em;
+    }
+
+    section h2 {
+        font-size: 2.5em;
+        text-align: center;
+
+    }
+    
+    section h3 {
+        font-size: 1.5em;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    
+    .sectionTitle {
+        text-align: center;
+    }
+
+    .sectionContent {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionMedia {
+        grid-area: media;
+        width: 25em;
+        min-height: 20em;
+        justify-self: center;
+        align-self: center;
+    } 
+
+    /* Secciones con contenido a la derecha */
+    .sectionRight {
+        grid-template-areas: "titulo"
+                             "contenido";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 2em 0;
+        padding: 0 3em;
+    }
+
+    .sectionRight img {
+        display: none;
+    }
+
+    .sectionMediaRight {
+        grid-template-areas: "titulo"
+                             "contenido"
+                             "media";
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr 2fr;
+    }
+
+    /* Secciones con contenido a la izquierda */
+    .sectionLeft {
+        grid-template-areas: "titulo"
+                             "contenido";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 2em 0;
+        padding: 0 3em;
+    }
+
+    .sectionLeft img {
+        display: none;
+    }
+
+    /*Secciones particulares fondos */
+
+    .amamosElCafe{
+        background-image: url("../images/chica.jpg");
+        background-size: cover;
+    }
+
+    .buscasCafe {
+        background-image: url("../images/expreso.jpg");
+        background-size: cover;
+    }
+
+    /*Seccion comunidad */
+    .sectionComments {
+        margin: 2em 0;
+    }
+
+    .sectionComments ul {
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+    
+    .sectionComments>ul>li>img {
+        width: 5.5em;
+    }
+
+    /* Usuario prescindible */
+    #user5 {
+        display: none;
+    }
+
+    /* Comentarios de los usuarioes */
+    .comments {
+        justify-content: center;
+    }
+    
+    .comments img {
+        width: 2em;
+        margin: .5em;
+    }
+
+    .comments p {
+        width: 80%;
+        text-align: justify;
+        font-weight: 400;
+    }
+
+    /*Secciones pestañas */
+    .sectionTab ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .sectionTab ul li {
+        width: 5em;
+        justify-self: center;
+        align-self: center;
+        justify-items: center;
+    }
+
+    /* formularios */
+
+    .textInput {
+        width: 20em;
+    }
+
+    .submit {
+        width: 15em;
+    }
+
+    /* Formulario de contacto */
+    .contactForm {
+    align-items: center;
+    }
+
+    .contactForm h3 {
+        text-align: center;
+    }
+
+    /* footer */
+
+    .copyright {
+        padding: .5em 3em;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-size: .4em;
+    }
+}

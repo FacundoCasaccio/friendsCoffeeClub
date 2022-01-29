@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link a CSS -->
+    <link rel="stylesheet" href="../css/estilos.css" />
+
+    <!-- links de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <title>Registro - Friends Coffee Club</title>
+  </head>
+
+  <body>
+<div class="container">
+      <!-- Encabezado de pagina -->
+      <nav>
+    
+        <a href="../index.html"><img src="../images/logoFriends.png" alt="Logo Friends Coffee Club" /></a>
+  
+        <ul>
+          <li><a href="../index.html"> Home </a></li>
+          <li><a href="elClub.html"> Club </a></li>
+          <li><a href="info.html"> Info </a></li>
+          <li><a href="nosotros.html"> Nosotros </a></li>
+          <li><a href="contacto.html"> Contacto </a></li>
+          <li><a href="registro.html"><img src="../images/iconoPerfil.png" alt="incono de perfil" /></a></li>
+        </ul>
+        
+        <!-- Menu hamburguesa -->
+        <ul class="burgerMenu">
+          <li><img src="../images/burger1.png" alt="">
+            <ul class="burgerSubMenu">
+              <li><a href="../index.html"> Home </a></li>
+              <li><a href="elClub.html"> Club </a></li>
+              <li><a href="info.html"> Info </a></li>
+              <li><a href="nosotros.html"> Nosotros </a></li>
+              <li><a href="contacto.html"> Contacto </a></li>
+              <li><a href="registro.html"> Perfil </a></li>
+            </ul>
+          </li>
+        </ul>
+  
+      </nav>
+  
+    <header>
+  
+      <img src="../images/registro.jpg" alt="">
+  
+    </header>
+  
+      <!-- Contenido principal -->
+      <main>
+
+        <!-- Formulario de registro -->
+        <form id="registro" action="">
+          <fieldset class="contactForm registro">
+
+              <h3>Unite al club!</h3>
+
+              <label for="nombre"> Nombre (*) </label>
+              <input class="textInput" type="text" name="nombre" placeholder="Ingresá tu nombre" required/>
+
+              <label for="email"> E-Mail (*) </label>
+              <input class="textInput" type="email" name="email" placeholder="Ingresá tu mail"/>
+
+              <label for="password"> Contraseña (*) </label>
+              <input class="textInput" type="password" name="password" placeholder="Ingresá tu contraseña"/>
+
+
+              <label for="localidad"> Localidad (*)</label> 
+              <select class="textInput" name="localidad" id="" required>
+                <option value="" selected disabled> Selecciona una opcion </option>
+                <option value="adrogue"> Adrogué </option>
+                <option value="temperley"> Temperley </option>
+                <option value="lomas"> Lomas de Zamora </option>
+                <option value="banfield"> Banfield </option>
+                <option value="escalada"> Remedios de Escalada </option>
+                <option value="lanus"> Lanus </option>
+                <option value="avellaneda"> Avellaneda </option>
+                <option value="caba"> Capital Federal </option>
+              </select>
+
+              <input class="submit" type="submit" name="registro" id="" value="Registrarme"/>
+
+  
+          </fieldset>
+        </form>
+  
+      </main>
+  
+        <!-- Pie de pagina -->
+        <footer>
+  
+          <div class="contenidoFooter">
+  
+            <ul class="mapa">
+              <li><a href="../index.html"> Home </a></li>
+              <li><a href="elClub.html"> Club </a></li>
+              <li><a href="info.html"> Info </a></li>
+              <li><a href="nosotros.html"> Nosotros </a></li>
+              <li><a href="contacto.html"> Contacto </a></li>
+              <li><a href="registro.html"> Perfil </a></li>
+            </ul>
+  
+            <ul class="redesSociales">
+              <li><a href=""> <img src="../images/facebook.png" alt="logo de facebook"></a></li>
+              <li><a href=""> <img src="../images/instagram.png" alt="logo instagram"></a></li>
+              <li><a href=""> <img src="../images/pinterest.png" alt="logo pinterest"></a></li>
+            </ul>
+  
+          </div>
+  
+          <div class="copyright">
+            <p>Creado por Facundo Casaccio - 2021 Todos los derechos reservados</p>
+          </div>
+            
+        </footer>
+</div>
+  </body>
+</html>
