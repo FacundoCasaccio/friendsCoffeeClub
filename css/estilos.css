@@ -11,7 +11,7 @@ body {
 }
 
 /* Contenedor padre */
-.container {
+.contenedor {
     display: grid;
     grid-template-areas: "nav"
                          "header"
@@ -28,53 +28,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 4em;
     padding: 1em 0;
 }
 
 /* Logo */
-nav > a > img {
+#logo {
     width: 20em;
 }
 
-/*Menu de navegacion */
-nav ul {
-    display: flex;
-    list-style-type: none;
-    width: 50%;
-    justify-content: space-between;
-}
-
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-nav ul li a:hover {
-    transition: .5s;
-    color: #E9B872;
-}
-
-nav > ul > li > a > img {
+.nav-link img {
     width: 1em;
 }
-
-nav > ul > li > a > img:hover {
-    animation-name: agrandarPerfil;
-    animation-fill-mode: forwards;
-    animation-duration: .5s;
-}
-
-.burgerMenu {
-    display: none;
-}
-
-.burgerSubMenu {
-    display: none;
-}
-
-/* Estilos header */
 
 header {
     grid-area: header;
@@ -387,6 +351,8 @@ footer {
 
 footer ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 footer ul li a {
@@ -449,6 +415,7 @@ footer ul li a {
 .copyright p{
     font-size: .6em;
     letter-spacing: .05em;
+    margin: 0;
 }
 
 /* Keyframes */
@@ -480,7 +447,7 @@ footer ul li a {
         font-size: 14px;
     }
 
-    .container {
+    .contenedor {
         display: grid;
         grid-template-areas: "nav"
                              "header"
@@ -729,7 +696,7 @@ footer ul li a {
         font-size: 16px;
     }
 
-    .container {
+    .contenedor {
         grid-template-rows: .15fr .8fr auto .25fr;
     }
 
