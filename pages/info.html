@@ -24,11 +24,11 @@
       rel="stylesheet"
     />
 
-    <title> Info - Friends Coffee Club </title>
+    <title>Info - Friends Coffee Club</title>
   </head>
   <body>
     <div class="contenedor">
-
+      
 
       <!-- Menu -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-negro py-3">
@@ -66,11 +66,11 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="elClub.html"> Club </a>
+                <a class="nav-link active" href="elClub.html"> Club </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="info.html"> Info </a>
+                <a class="nav-link" href="info.html"> Info </a>
               </li>
 
               <li class="nav-item">
@@ -94,78 +94,266 @@
         </div>
       </nav>
 
+
+      <!-- portada -->
       <header>
         <img src="../images/info.jpg" alt="" />
       </header>
 
       <!-- Contenido principal -->
       <main>
-        <!-- Seccion de tipos de cafe -->
+
+
+        <!-- tipos de cafe -->
         <section class="sectionTab">
-          <!-- Pestañas para elegir tipo de cafe -->
+
           <h2>Tipos de Café</h2>
 
-          <ul>
-            <li>Espresso</li>
-            <li>Cappuccino</li>
-            <li>Latte</li>
-            <li>Cortado</li>
-            <li>Flat White</li>
+          <!-- pestañas de tipos de cafe -->
+          <ul class="nav" id="myTab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="flatWhite-tab"  data-bs-toggle="tab"  data-bs-target="#flatWhite"  type="button"  role="tab"  aria-controls="home"  aria-selected="true">
+                Flat White
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="espresso-tab"  data-bs-toggle="tab"  data-bs-target="#espresso"  type="button"  role="tab"  aria-controls="profile"  aria-selected="false">
+                Espresso
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="latte-tab"  data-bs-toggle="tab"  data-bs-target="#latte"  type="button"  role="tab"  aria-controls="contact"  aria-selected="false">
+                Latte
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="cortado-tab"  data-bs-toggle="tab"  data-bs-target="#cortado"  type="button"  role="tab"  aria-controls="contact"  aria-selected="false">
+                Cortado
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="capuccino-tab"  data-bs-toggle="tab"  data-bs-target="#capuccino"  type="button"  role="tab"  aria-controls="contact"  aria-selected="false">
+                Capuccino
+              </button>
+            </li>
+
           </ul>
 
-          <!-- Contenido de la pestaña cafe -->
 
-          <div class="sectionLeft">
-            <img
-              class="sectionMedia"
-              src="../images/flatWhite.jpg"
-              alt="Tipos de cafe"
-            />
+          <!-- contenido de pestañas -->
+          <div class="tab-content" id="myTabContent">
 
-            <h3 class="sectionTitle">Flat White</h3>
+            <!-- flat white -->
+            <div class="tab-pane fade show active" id="flatWhite" role="tabpanel" aria-labelledby="flatWhite-tab">
+              <section class="sectionLeft">
 
-            <p class="sectionContent">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur id hic, dolorem quas veritatis beatae saepe placeat
-              perspiciatis, suscipit, expedita ex sunt doloribus ut qui. Aut
-              itaque nemo vitae voluptatum?
-            </p>
+                <img class="sectionMedia" src="../images/flatWhite.jpg" alt="Tipos de cafe"/>
+
+                <h3 class="sectionTitle">Flat White</h3>
+
+                <p class="sectionContent">
+                  El flat white es una bebida de café inventada en Australia en
+                  la década de 1980. Se prepara agregando una capa fina de leche
+                  caliente o microespuma en un café expreso, simple o doble.
+                </p>
+
+              </section>
+            </div>
+
+            <!-- espresso -->
+            <div class="tab-pane fade" id="espresso" role="tabpanel" aria-labelledby="espresso-tab">
+              <section class="sectionLeft">
+
+                <img  class="sectionMedia"  src="../images/espresso.jpg"  alt="Tipos de cafe"/>
+
+                <h3 class="sectionTitle">Espresso</h3>
+
+                <p class="sectionContent">
+                  El café expreso es una forma de preparación de café originada
+                  en Italia.​ Debe su término a la obtención de esta bebida a
+                  través de una cafetera expreso.​ Se caracteriza por su rápida
+                  preparación a una alta presión y por un sabor y textura más
+                  concentrados.
+                </p>
+
+              </section>
+            </div>
+
+            <!-- latte -->
+            <div  class="tab-pane fade"  id="latte"  role="tabpanel"  aria-labelledby="latte-tab">
+              <section class="sectionLeft">
+
+                <img  class="sectionMedia"  src="../images/latte.jpg"  alt="Tipos de cafe"/>
+
+                <h3 class="sectionTitle">Latte</h3>
+
+                <p class="sectionContent">
+                  El café latte se prepara con una o dos dosis de expreso (1/3
+                  de la bebida) y 2/3 de leche calentada con vapor, con una
+                  pequeña capa (alrededor de 1 cm) de espuma de leche. La
+                  textura de un café latte es muy importante, ya que aporta esa
+                  bella apariencia a la bebida.
+                </p>
+
+              </section>
+            </div>
+
+            <!-- cortado -->
+            <div  class="tab-pane fade"  id="cortado"  role="tabpanel"  aria-labelledby="cortado-tab">
+              <section class="sectionLeft">
+
+                <img  class="sectionMedia"  src="../images/cortado.png"  alt="Tipos de cafe"/>
+
+                <h3 class="sectionTitle">Cortado</h3>
+
+                <p class="sectionContent">
+                  Un cortado es un término de origen español para denominar a un
+                  café espresso con una pequeña cantidad de leche, normalmente
+                  caliente, para quitarle el amargor al café.
+                </p>
+              </section>
+            </div>
+
+            <!-- capuccino -->
+            <div  class="tab-pane fade"  id="capuccino"  role="tabpanel"  aria-labelledby="capuccino-tab">
+              <section class="sectionLeft">
+
+                <img  class="sectionMedia"  src="../images/capuccino.jpg"  alt="Tipos de cafe"/>
+
+                <h3 class="sectionTitle">Capuccino</h3>
+
+                <p class="sectionContent">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur id hic, dolorem quas veritatis beatae saepe
+                  placeat perspiciatis, suscipit, expedita ex sunt doloribus ut
+                  qui. Aut itaque nemo vitae voluptatum?
+                </p>
+
+              </section>
+            </div>
+
           </div>
         </section>
 
-        <!-- Seccion de preparaciones de Cafe -->
+
+        <!-- tipos de preparaciones -->
         <section class="sectionTab">
-          <!-- Pestañas para elegir preparaciones -->
 
-          <h2>Tipos de Preparaciones</h2>
+          <h2>Tipos de preparaciones</h2>
 
-          <ul>
-            <li>Filtro</li>
-            <li>Italiana</li>
-            <li>Émbolo</li>
+          <!-- pestañas de tipos de preparaciones -->
+          <ul class="nav" id="myTab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="filtro-tab"  data-bs-toggle="tab"  data-bs-target="#filtro"  type="button"  role="tab"  aria-controls="home"  aria-selected="true">
+                Filtro
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="italiana-tab"  data-bs-toggle="tab"  data-bs-target="#italiana"  type="button"  role="tab"  aria-controls="profile"  aria-selected="false">
+                Italiana
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button  class=""  id="francesa-tab"  data-bs-toggle="tab"  data-bs-target="#francesa"  type="button"  role="tab"  aria-controls="contact"  aria-selected="false">
+                Francesa
+              </button>
+            </li>
+
           </ul>
 
-          <!-- Contenido de pestaña preparaciones-->
-          <div class="sectionMediaRight">
-            <h3 class="sectionTitle">Filtro</h3>
 
-            <p class="sectionContent">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-              laudantium, odit quidem qui ut corrupti dolorum nam ab corporis
-              esse delectus, facere placeat ullam optio libero veniam. Alias,
-              quas porro.
-            </p>
+          <!-- contenido de pestañas -->
+          <div class="tab-content" id="myTabContent">
 
-            <iframe
-              class="sectionMedia video"
-              src="https://www.youtube.com/embed/zYeIqZzmTKs"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <!-- cafetera de filtro -->
+            <div  class="tab-pane fade show active"  id="filtro"  role="tabpanel"  aria-labelledby="filtro-tab">
+              <section class="sectionMediaRight">
+
+                <h3 class="sectionTitle">Filtro</h3>
+
+                <p class="sectionContent">
+                  La cafetera de filtro es utilizada para la preparación de café
+                  al ciclar continuamente la preparación casi hirviendo a través
+                  de los molidos usando la gravedad hasta alcanzar la fuerza
+                  requerida para que el cafe empiece a gotear y verterse en el
+                  recipiente.
+                </p>
+
+                <iframe
+                  class="sectionMedia video"
+                  src="https://www.youtube.com/embed/h4BG-tuqgWk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+
+              </section>
+            </div>
+
+            <!-- cafetera italiana -->
+            <div  class="tab-pane fade"  id="italiana"  role="tabpanel"  aria-labelledby="italiana-tab">
+              <section class="sectionMediaRight">
+
+                <h3 class="sectionTitle">Italiana</h3>
+
+                <p class="sectionContent">
+                  La cafetera italiana es también conocida como cafetera moka,
+                  greca o macchinetta. Es muy similar a la cafetera de expreso y
+                  destaca por su sencillez. Hace el café mediante el paso de
+                  agua hervida presurizada por vapor, a través de café molido
+                </p>
+
+                <iframe
+                  class="sectionMedia video"
+                  src="https://www.youtube.com/embed/i5pvZZBTkxo"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+
+              </section>
+            </div>
+
+            <!-- cafetera francesa -->
+            <div  class="tab-pane fade"  id="francesa"  role="tabpanel"  aria-labelledby="francesa-tab">
+              <section class="sectionMediaRight">
+
+                <h3 class="sectionTitle">Francesa</h3>
+
+                <p class="sectionContent">
+                  La prensa francesa es un método de preparación de inmersión,
+                  lo cual significa que el café se extrae mientras está
+                  completamente sumergido en agua. Después de dejarlo en
+                  infusión durante cierto tiempo, se baja el filtro para separar
+                  la molienda del café extraído
+                </p>
+
+                <iframe
+                  class="sectionMedia video"
+                  src="https://www.youtube.com/embed/81fUhjXi0dE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+
+              </section>
+            </div>
+
           </div>
         </section>
+
+        
       </main>
 
       <!-- Pie de pagina -->
@@ -224,7 +412,7 @@
         crossorigin="anonymous"
       ></script>
 
-
+      
     </div>
   </body>
 </html>
