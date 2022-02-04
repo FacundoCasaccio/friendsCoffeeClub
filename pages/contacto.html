@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- link estilos bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- estilos bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
-    <!-- link a CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/estilos.css" />
 
-    <!-- links de google fonts -->
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,62 +24,86 @@
       rel="stylesheet"
     />
 
-    <title>Contacto - Friends Coffee Club</title>
+    <title> Contacto - Friends Coffee Club </title>
   </head>
   <body>
     <div class="contenedor">
-  
-          <!-- Encabezado de pagina -->
-          <nav class="navbar navbar-expand-lg navbar-dark bg-negro py-3">
-            <div class="container">
+
       
-              <a class="navbar-brand col-7" href="../index.html"><img id="logo" src="../images/logoFriends.png" alt="logo friends cofee club"></a>
+      <!-- Menu -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-negro py-3">
+        <div class="container">
+
+
+          <a class="navbar-brand col-7" href="../index.html">
+            <img
+              id="logo"
+              src="../images/logoFriends.png"
+              alt="logo friends cofee club"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- elementos de menu -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+
+            <ul class="navbar-nav d-md-flex-end w-100 d-flex justify-content-evenly">
               
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-      
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-md-flex-end w-100 d-flex justify-content-evenly">
-      
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-                  </li>
-      
-                  <li class="nav-item">
-                    <a class="nav-link" href="elClub.html"> Club </a>
-                  </li>
-      
-                  <li class="nav-item">
-                    <a class="nav-link" href="info.html"> Info </a>
-                  </li>
-      
-                  <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html"> Nosotros </a>
-                  </li>
-      
-                  <li class="nav-item">
-                    <a class="nav-link active" href="contacto.html"> Contacto </a>
-                  </li>
-      
-                  <li class="nav-item">
-                    <a class="nav-link" href="registro.html"> <img id="perfil" src="../images/iconoPerfil.png" alt=""></a>
-                  </li>
-      
-                </ul>
-              </div>
-              
-            </div>
-          </nav>
-  
-        <header>
-  
-          <img src="../images/contacto.jpg" alt="">
-  
-        </header>
-  
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="elClub.html"> Club </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="info.html"> Info </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html"> Nosotros </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="contacto.html"> Contacto </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="registro.html">
+                  <img id="perfil" src="../images/iconoPerfil.png" alt=""/>
+                </a>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- portada -->
+      <header>
+        <img src="../images/contacto.jpg" alt="" />
+      </header>
+
+
       <!-- Contenido principal -->
       <main>
+
 
         <!-- Presentacion -->
         <section class="sectionText">
@@ -82,65 +111,118 @@
           <h2>Contactanos</h2>
 
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-              aperiam magni vel labore ipsum error obcaecati provident doloremque
-              odit, vero maiores unde itaque pariatur dicta molestias inventore
-              molestiae dolor magnam?
+            Estamos abiertos a recomendaciones o comentarios constructivos que puedan hacernos crecer, mejorar y en consecuencia, que toda la comunidad pueda tener una mejor experiencia.
           </p>
-  
+
         </section>
-  
+
+
         <!-- Formulario de contacto -->
         <form action="">
           <fieldset class="contactForm">
 
-            <h3 >Contanos tu opinión</h3>
-  
-            <input class="textInput" type="text" name="nombre" placeholder="Ingresa tu nombre y apellido" />
+            <h3> Dejanos tu comentario </h3>
 
-            <input class="textInput" type="email" name="email" required placeholder="Ingresa tu correo electronico (*)"/>
+            <!-- nombre -->
+            <input
+              class="textInput"
+              type="text"
+              name="nombre"
+              placeholder="Ingresa tu nombre y apellido"
+            />
 
+            <!-- email -->
+            <input
+              class="textInput"
+              type="email"
+              name="email"
+              required
+              placeholder="Ingresa tu correo electronico (*)"
+            />
+
+            <!-- comentario -->
             <label for="comentarios"> Escribi tu comentario: </label>
-            <textarea class="textInput" name="comentarios" id="" cols="30" rows="10" required></textarea>
-  
-            <input class="submit" type="submit" name="enviar" id="" value="Enviar"/>
-  
+            <textarea
+              class="textInput"
+              name="comentarios"
+              id=""
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+
+            <!-- submit -->
+            <input
+              class="submit"
+              type="submit"
+              name="enviar"
+              id=""
+              value="Enviar"
+            />
+
           </fieldset>
         </form>
+
         
       </main>
-  
+
       <!-- Pie de pagina -->
       <footer>
 
+
         <div class="contenidoFooter">
 
+          <!-- mapa de sitio -->
           <ul class="mapa">
+
             <li><a href="../index.html"> Home </a></li>
             <li><a href="elClub.html"> Club </a></li>
             <li><a href="info.html"> Info </a></li>
             <li><a href="nosotros.html"> Nosotros </a></li>
             <li><a href="contacto.html"> Contacto </a></li>
             <li><a href="registro.html"> Perfil </a></li>
+            
           </ul>
 
+          <!-- redes sociales -->
           <ul class="redesSociales">
-            <li><a href=""> <img src="../images/facebook.png" alt="logo de facebook"></a></li>
-            <li><a href=""> <img src="../images/instagram.png" alt="logo instagram"></a></li>
-            <li><a href=""> <img src="../images/pinterest.png" alt="logo pinterest"></a></li>
+            
+            <li>
+              <a href=""><img src="../images/facebook.png" alt="logo de facebook"/></a>
+            </li>
+
+            <li>
+              <a href=""><img src="../images/instagram.png" alt="logo instagram"/></a>
+            </li>
+
+            <li>
+              <a href=""><img src="../images/pinterest.png" alt="logo pinterest"/></a>
+            </li>
+
           </ul>
 
         </div>
 
+        <!-- derechos de autor -->
         <div class="copyright">
-          <p>Creado por Facundo Casaccio - 2021 Todos los derechos reservados</p>
+
+          <p>
+            Creado por Facundo Casaccio - 2021 Todos los derechos reservados
+          </p>
+
         </div>
-          
+
+
       </footer>
 
-      <!-- scripts bootstrap -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      
-</div>
+      <!-- scripts de  bootstrap -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+
+ 
+    </div>
   </body>
 </html>

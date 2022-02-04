@@ -46,6 +46,7 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    min-height: 50vh;
 }
 
 header img {  
@@ -74,6 +75,7 @@ main {
 }
 
 .boton:hover {
+    color: white;
     animation-name: agrandarBoton;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -458,59 +460,13 @@ footer ul li a {
     }
 
     /* Nav */
-
-    nav{
-        margin: 0 2em;
-    }
-    nav ul {
-        display: none;
+    nav {
+        margin: 0 1em;
     }
 
-    nav > a > img {
-        width: 10em;
+    #logo {
+        width: 15em;
     }
-
-    /* Menu hamburguesa */
-    .burgerMenu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 5em;
-    }
-
-    .burgerMenu img {
-        width: 2em;
-    }
-    
-    .burgerMenu:hover .burgerSubMenu {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-    }
-
-    .burgerMenu:focus .burgerSubMenu {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-    }
-
-    .burgerSubMenu > li {
-        width: 100%;
-        font-size: .8em;
-        background-color: black;
-        padding: .8em .2em;
-    }
-
-    .burgerSubMenu li a:hover {
-        color: #E9B872;
-    }
-
 
     /* Main */
     main {
@@ -684,7 +640,7 @@ footer ul li a {
     }
 
     .copyright p {
-        font-size: .4em;
+        font-size: .7em;
     }
     
 }
@@ -701,55 +657,10 @@ footer ul li a {
     }
 
     /* Nav */
-
-    nav{
+    nav {
         margin: 0 3em;
     }
-    nav ul {
-        display: none;
-    }
 
-    nav > a > img {
-        width: 15em;
-    }
-
-    /* Menu hamburguesa */
-    .burgerMenu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 5em;
-    }
-    
-    .burgerMenu img {
-        width: 2em;
-    }
-        
-    .burgerMenu:hover .burgerSubMenu {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: auto;
-    }
-    
-    .burgerMenu:focus .burgerSubMenu {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-    }
-    
-    .burgerSubMenu > li {
-        width: 100%;
-        font-size: .8em;
-        background-color: black;
-        padding: .8em .4em;
-    }
-    
     /* Main */
 
     main {
@@ -918,6 +829,6 @@ footer ul li a {
     }
 
     .copyright p {
-        font-size: .4em;
+        font-size: .7em;
     }
 }
