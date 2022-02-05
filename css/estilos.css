@@ -10,6 +10,8 @@ body {
     font-family: 'Mulish', sans-serif;
 }
 
+
+
 /* Contenedor padre */
 .contenedor {
     display: grid;
@@ -21,7 +23,9 @@ body {
 
 }
 
-/* Estilos nav */
+
+
+/* nav */
 
 nav {
     grid-area: nav;
@@ -31,7 +35,6 @@ nav {
     padding: 1em 0;
 }
 
-/* Logo */
 #logo {
     width: 20em;
 }
@@ -39,6 +42,10 @@ nav {
 .nav-link img {
     width: 1em;
 }
+
+
+
+/* portada */
 
 header {
     grid-area: header;
@@ -53,7 +60,9 @@ header img {
     width: 100%;
 }
 
-/* Elementos main */
+
+
+/* elementos principales */
 
 main {
     grid-area: main;
@@ -64,7 +73,9 @@ main {
     margin: 3em 0;
 }
 
+
 /* Botones */
+
 .boton {
     background-color: #E9B872;
     text-align: center;
@@ -82,7 +93,7 @@ main {
 }   
 
 
-/* Elementos de section */
+/* Elementos section genericos */
 
 section {
     margin: 3em 4em;
@@ -105,6 +116,9 @@ section p {
     font-weight: lighter;
     padding: 2em 0;
 }
+
+
+/* elementos section especificos */
 
 .sectionTitle {
     grid-area: titulo;
@@ -136,12 +150,14 @@ section p {
 }
 
 
-/*  Secciones
+/*  Tipos de secciones
 
     >sectionRight/Left contienen una imagen
     >sectionMediaRight/Left contienen multimedia (videos, mapas) */
 
+
 /* Seccciones con contenido a la derecha */
+
 .sectionRight {
     display: grid;
     grid-template-areas: "titulo media"
@@ -160,7 +176,9 @@ section p {
     grid-column-gap: 10%;
 }
 
+
 /* Seccciones con contenido a la izquierda */
+
 .sectionLeft {
     display: grid;
     grid-template-areas: "media titulo"
@@ -179,14 +197,18 @@ section p {
     grid-column-gap: 10%;
 }
 
+
 /* Secciones con solo texto */
+
 .sectionText {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Secciones con pestañas */
+
+/* Secciones con pestañas y sus elementos */
+
 .sectionTab {
     display: flex;
     flex-direction: column;
@@ -224,7 +246,9 @@ section p {
     border: none;
 }
 
-/* Seccion comentarios de la comunidad */
+
+/* Seccion comentarios */
+
 .sectionComments {
     display: flex;
     flex-direction: column;
@@ -237,7 +261,9 @@ section p {
     margin: 2em 0;
 }
 
+
 /* usuarios */
+
 .sectionComments ul {
     list-style-type: none;
     display: grid;
@@ -258,7 +284,9 @@ section p {
     width: 8em;
 }
 
-/* comentarios de usuarios */
+
+/* comentarios */
+
 .comments {
     display: flex;
     justify-content: space-between;
@@ -277,6 +305,7 @@ section p {
     font-weight: 400;
 }
 
+
 /* Formularios */
 
 form {
@@ -284,7 +313,9 @@ form {
     width: 100%;
 }
 
+
 /* Formulario de contacto */
+
 .contactForm {
     height: 100%;
     background-image: url("../images/formulario.jpg");
@@ -312,13 +343,17 @@ form {
     opacity: 80%;
 }
 
+
 /* formulario de registro (cambio de fondo) */
+
 .registro {
     background-image: url("../images/formularioRegistro.jpg");
     background-position: center;
 }
 
+
 /*Elementos de formularios */
+
 .textInput {
     border-radius: 5px;
     border: none;
@@ -348,7 +383,8 @@ form {
     animation-fill-mode: forwards;
 }
 
-/* Estilos footer */
+
+/* footer */
 
 footer {
     grid-area: footer;
@@ -368,7 +404,10 @@ footer ul li a {
     text-decoration: none;
     color: white;
 }
+
+
 /* Contenedor de elementos de footer */ 
+
 .contenidoFooter {
     display: flex;
     justify-content: space-between;
@@ -376,7 +415,10 @@ footer ul li a {
     margin: 0 15%;
     height: 10em;
 }
-/* Mapa de sitio */
+
+
+/* mapa de sitio */
+
 .mapa {
     display: flex;
     flex-direction: column;
@@ -393,7 +435,9 @@ footer ul li a {
     transition: .5s;
 }
 
-/* Links a redes sociales */
+
+/* redes sociales */
+
 .redesSociales {
     display: flex;
     width: 10em;
@@ -411,7 +455,9 @@ footer ul li a {
     animation-duration: .5s;
 }
 
-/* Estilos socalo de copyright */
+
+/* copyright */
+
 .copyright {
     background-color: black;
     display: flex;
@@ -426,6 +472,9 @@ footer ul li a {
     letter-spacing: .05em;
     margin: 0;
 }
+
+
+
 
 /* Keyframes */
 
@@ -447,9 +496,13 @@ footer ul li a {
     }
 }
 
+
+
 /* Media queries */
 
+
 /* Mobile */
+
 @media screen and (min-width: 320px) and (max-width: 600px) {
 
     * {
@@ -466,7 +519,9 @@ footer ul li a {
         
     }
 
-    /* Nav */
+
+    /* nav */
+
     nav {
         margin: 0 1em;
     }
@@ -479,12 +534,17 @@ footer ul li a {
         min-height: auto;
     }
 
-    /* Main */
+
+    /* contenido principal */
+
     main {
         margin: 2em 0;
         width: 100%;
     }
-    /* Elementos section */
+
+
+    /* elementos section genericos */
+
     section {
         margin: 2em 2em;
     }
@@ -500,6 +560,9 @@ footer ul li a {
         font-weight: 400;
         text-transform: uppercase;
     }
+
+
+    /* elementos section especificos */
 
     .sectionTitle {
         text-align: center;
@@ -518,7 +581,10 @@ footer ul li a {
         align-self: center;
     } 
 
+
+
     /* Section contenido a la derecha */
+
     .sectionRight {
         display: grid;
         grid-template-areas: "titulo"
@@ -542,7 +608,10 @@ footer ul li a {
         display: none;
     }
 
+
+
     /* Section contenido a la izquierda */
+
     .sectionLeft {
         display: grid;
         grid-template-areas: "titulo"
@@ -558,7 +627,10 @@ footer ul li a {
         display: none;
     }
 
-    /*Seccion comunidad */
+
+
+    /* seccion comunidad y sub elementos */
+
     .sectionComments {
         margin: 2em 0;
         min-height: 20vh;
@@ -580,7 +652,10 @@ footer ul li a {
         display: none;
     }
 
+
+
     /* Imagenes de usuarios (prescindibles en pantallas mas pequeñas) */
+
     #user4 {
         display: none;
     }
@@ -589,7 +664,10 @@ footer ul li a {
         display: none;
     }
 
+
+
     /*Comentarios de los usuarios */
+
     .comments {
         justify-content: center;
     }
@@ -605,8 +683,9 @@ footer ul li a {
         font-weight: 400;
     }
 
-    /*Secciones pestañas */
 
+
+    /*Secciones pestañas */
 
     .sectionTab ul li {
         width: 30%;
@@ -615,7 +694,10 @@ footer ul li a {
         justify-items: center;
     }
 
+
+
     /* formularios */
+
     form {
         width: 100%;
     }
@@ -629,6 +711,7 @@ footer ul li a {
     }
 
     /* Formulario de contacto */
+
     .contactForm {
     align-items: center;
     padding: 0 0;
@@ -637,6 +720,8 @@ footer ul li a {
     .contactForm h3 {
         text-align: center;
     }
+
+
 
     /* footer */
 
@@ -656,7 +741,10 @@ footer ul li a {
     
 }
 
+
+
 /* Tablet */
+
 @media screen and (min-width: 600px) and (max-width: 1024px) {
 
     * {
@@ -667,18 +755,25 @@ footer ul li a {
         grid-template-rows: .15fr .8fr auto .25fr;
     }
 
-    /* Nav */
+
+
+    /* nav */
+
     nav {
         margin: 0 3em;
     }
 
-    /* Main */
+
+
+    /* contenido principal */
 
     main {
         margin: 0em 0;
     }
 
-    /* Elementos de secciones */
+
+    /* elementos genericos de secciones */
+
     section {
         margin: 2em 3em;
     }
@@ -695,6 +790,8 @@ footer ul li a {
         text-transform: uppercase;
     }
 
+
+    /* elementos section especificos */
     
     .sectionTitle {
         text-align: center;
@@ -713,7 +810,10 @@ footer ul li a {
         align-self: center;
     } 
 
+
+
     /* Secciones con contenido a la derecha */
+
     .sectionRight {
         grid-template-areas: "titulo"
                              "contenido";
@@ -737,7 +837,10 @@ footer ul li a {
         grid-template-rows: .5fr 1fr 2fr;
     }
 
+
+
     /* Secciones con contenido a la izquierda */
+
     .sectionLeft {
         grid-template-areas: "titulo"
                              "contenido";
@@ -753,7 +856,9 @@ footer ul li a {
         display: none;
     }
 
-    /*Secciones particulares fondos */
+
+
+    /* backgrounds secciones index */
 
     .amamosElCafe{
         background-image: url("../images/chica.jpg");
@@ -765,7 +870,10 @@ footer ul li a {
         background-size: cover;
     }
 
+
+
     /*Seccion comunidad */
+
     .sectionComments {
         margin: 2em 0;
     }
@@ -782,10 +890,12 @@ footer ul li a {
         min-width: 5em;
     }
 
-    /* Usuario prescindible */
+
+    /* usuario prescindible */
     #user5 {
         display: none;
     }
+
 
     /* Comentarios de los usuarioes */
     .comments {
@@ -803,6 +913,8 @@ footer ul li a {
         font-weight: 400;
     }
 
+
+
     /*Secciones pestañas */
 
     .sectionTab ul li {
@@ -811,6 +923,8 @@ footer ul li a {
         align-self: center;
         justify-items: center;
     }
+
+
 
     /* formularios */
 
@@ -823,6 +937,7 @@ footer ul li a {
     }
 
     /* Formulario de contacto */
+
     .contactForm {
     align-items: center;
     }
@@ -830,6 +945,8 @@ footer ul li a {
     .contactForm h3 {
         text-align: center;
     }
+
+
 
     /* footer */
 
