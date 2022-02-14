@@ -1,0 +1,19 @@
+/* Keyframes */
+
+@keyframes agrandarPerfil {
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes agrandarBoton {
+    100% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes agrandar {
+    100% {
+        transform: scale(1.1);
+    }
+}

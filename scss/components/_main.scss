@@ -1,0 +1,571 @@
+/* elementos principales */
+main {
+    grid-area: main;
+    @include flex-column(space-evenly , center);
+    margin: 3em 0;
+
+    .boton {
+        @include button ("section");
+
+        &:hover {
+            @extend %button-animation;
+        }
+    }
+}
+
+/* elementos section genericos */
+section {
+    margin: 3em 4em;
+
+    h1, h2 {
+        @include section-h2("desktop");
+    }
+    h3 {
+        @include section-h3("desktop");
+    }
+    p {
+        @extend %section-p;
+    }
+}
+
+
+
+/* Secciones */
+
+/* section de texto */
+.sectionText {
+    @include flex-column (center , flex-start);
+}
+
+
+
+/* section con multimedia */
+.sectionMedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 10%;
+}
+
+/*complementos de section multimedia */
+//complemento media derecha
+.right {
+    grid-template-areas: "titulo media"
+                         "contenido media";
+}
+
+//complemento media izquierda
+.left {
+    grid-template-areas: "media titulo"
+                         "media contenido";
+}
+
+//complemento media imprescindible
+.important {
+    grid-template-areas: "titulo media"
+                         "contenido media";
+}
+
+
+
+
+/* section comentarios */
+.sectionComments {
+    @include flex-column (space-evenly , center);
+    background-color: map-get( $colors , comments );
+    width: 100%;
+    padding: 2em 0;
+    margin: 2em 0;
+
+    /* usuarios */
+    ul {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+        height: 10em;
+        padding: 0;
+
+        li {
+            @include flex-column(center , center);
+
+            button {
+                background-color: map-get($colors , comments );
+                border-radius: 50%;
+                border: 3.5px solid map-get($colors , comments );
+
+                &:hover {
+                    border: 3.5px solid #E9B872;
+                    transition: .7s;
+                }
+
+                img {
+                    width: 8em;
+                }
+            }
+        }
+    }
+}
+
+/* comentarios */
+.comments {
+    @include flex-row (space-around , center);
+
+    img {
+        width: 3em;
+        opacity: 30%;
+    }
+
+    p {
+        width: 60%;
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+
+
+/* seccion con pestañas */
+.sectionTab {
+    @include flex-column(space-between , center);
+
+    h2, h1 {
+        margin: 1em 0;
+    }
+
+    ul {
+        @include flex-row(space-around , center);
+        width: 100%;
+        margin-bottom: 2em;
+
+        li {
+            width: 15%;
+            padding: .5em;
+            text-align: center;
+            border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+            &:hover {
+                border-bottom: 2px solid #E9B872;
+                transition: linear .3s;
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                border: none;
+            }
+        }
+    }
+}
+
+
+
+/* elementos seccion especificos */
+//titulo
+.sectionTitle {
+    grid-area: titulo;
+    align-self: flex-end;
+}
+
+//contenido... titulo, texto y boton
+.sectionContent {  
+    grid-area: contenido;
+    @include flex-column (flex-start , flex-start);
+}
+
+//imagenes, iframes...
+.media {
+    grid-area: media;
+    width: 30em;
+    min-height: 20em;
+    justify-self: center;
+    align-self: center;
+} 
+
+//especifico para videos
+.video {
+    min-height: 15em;
+}
+
+
+
+/* formularios */
+form {
+    min-height: 40em;
+    width: 100%;
+}
+
+//formulario de contacto
+.contactForm {
+    @include flex-column(center , flex-start);
+    height: 100%;
+    background-image: url("../images/formulario.jpg");
+    background-size: cover;
+    border: none;
+    padding: 0 4em;
+
+    h2, h1 {
+        letter-spacing: .1em;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: 'Mulish', sans-serif;
+        font-size: 2em;
+        margin: 1em 0;
+    }
+
+    label {
+        font-weight: 200;
+        font-family: 'Mulish', sans-serif;
+        font-size: 1em;
+        opacity: 80%;
+    }
+}
+
+//complemento para cambio de fondo (formulario de registro)
+.registro {
+    background-image: url("../images/formularioRegistro.jpg");
+    background-position: center;
+}
+
+
+/* elementos de formularios */
+//inputs
+.textInput {
+    border-radius: 5px;
+    border: none;
+    width: 30em;
+    padding: .4em;
+    margin: 1em 0;
+    color: white;
+    background-color: #1E212B;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    resize: none;
+}
+
+//botones
+.submit {
+    @include button ("form");
+
+    &:hover {
+        @extend %button-animation;
+    }
+}
+
+
+/* media queries mobile para main */ 
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    main {
+        margin: 2em 0;
+    }
+
+    /* elementos genericos de section */
+    section {
+        margin: 2em 2em;
+
+        h2, h1 {
+            @include section-h2("mobile") 
+         }
+ 
+         h3 {
+            @include section-h3("mobile") 
+         }
+    }
+
+    /* secciones */
+
+    /* section de texto */
+    .sectionText {
+        @include flex-column (center , center);
+    }
+    
+    /* seccion con imagenes */
+    //complemento media derecha
+    .right {
+        @include sectionMediaDevice ("img" , "mobile");
+    }
+
+    //complemento media izquierda
+    .left {
+        @include sectionMediaDevice ("img" , "mobile");
+    }
+
+    //complemento media imprescindible
+    .important {
+        @include sectionMediaDevice ("media" , "mobile");
+    }
+
+
+    //seccion con multimedia
+    .sectionMedia {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 2fr;
+        grid-column-gap: 0;
+        align-items: center;
+        justify-items: center;
+        
+        img {
+            display: none;
+        }
+    }
+    
+    /* seccion comentarios */
+    .sectionComments {
+        margin: 2em 0;
+        min-height: 20vh;
+
+        /* usuarios */
+        ul {
+            grid-template-columns: repeat(3, auto);
+            grid-column-gap: 1em;
+            padding: 0;
+            width: 80%;
+
+            li {
+
+                button {
+                    border: 2px solid map-get($colors , comments );
+
+                    img {
+                        width: 100%;
+                        min-width: 5em;
+                    }
+                }
+                
+            }
+        }
+
+        //usuario prescindible
+        #user4-tab {
+            display: none;
+        }
+
+        //usuario prescindible
+        #user5-tab {
+            display: none;
+        }
+    }
+
+    /* comentarios de usuarios */
+    .comments {
+        justify-content: center;
+
+        img {
+            width: 1em;
+            margin: .5em;
+        }
+
+        p {
+            width: 80%;
+            text-align: justify;
+            font-weight: 400;
+        }
+    }
+
+
+    /* section con pestañas */
+    .sectionTab {
+        ul {
+            li {
+                width: 30%;
+            }
+        }
+    }
+
+
+    /*elementos section especificos */
+
+    //titulos de seccion
+    .sectionTitle {
+        text-align: center;
+    }
+
+    //contenido de seccion (titulo, texto, boton)
+    .sectionContent {
+        @include flex-column(center , center);
+    }
+
+    /* multimedia de seccion */
+    .media {
+        grid-area: media;
+        width: 100%;
+        min-height: 20em;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* formularios */
+
+    .contactForm {
+        align-items: center;
+        padding: 0 0;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .textInput {
+        width: 15em;
+    }
+
+    .submit {
+        width: 15em;
+    }
+
+}
+
+/* main tablet */
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    main {
+        margin: 0;
+    }
+
+    /* elementos genericos de section */
+    section {
+        margin: 2em 3em;
+
+        h2, h1 {
+           @include section-h2("tablet") 
+        }
+
+        h3 {
+           @include section-h3("tablet") 
+        }
+    }
+
+    /* secciones */
+
+
+    /* section de texto */
+    .sectionText {
+        @include flex-column (center , center);
+    }
+
+
+
+    /* secciones con imagenes */
+
+    //complemento media derecha
+    .right {
+        @include sectionMediaDevice ("img" , "tablet");
+    }
+
+    //complemento media izquierda
+    .left {
+        @include sectionMediaDevice ("img" , "tablet");
+    }
+
+    //complemento media imprescindible
+    .important { 
+        @include sectionMediaDevice ("media" , "tablet");
+    }
+    
+    /* seccion con multimedia */
+    .sectionMedia {
+        display: grid;
+        grid-column-gap: 0;
+        align-items: center;
+        justify-items: center;
+        margin: 2em 0;
+        padding: 0 3em;
+
+        img {
+            display: none;
+        }
+    }
+
+
+
+    /* seccion comentarios */
+    .sectionComments {
+        margin: 2em 0;
+
+        /* usuarios */
+        ul {
+            grid-template-columns: repeat(4, auto);
+            width: 80%;
+            grid-column-gap: 3em;
+            padding: 0;
+
+            li{
+                button {
+                    img {
+                        width: 100%;
+                        min-width: 6em;
+                    }
+                }
+            }
+        }
+
+        //usuario prescindible
+        #user5-tab {
+            display: none;
+        }
+    }
+
+    /* section con pestañas */
+    .sectionTab {
+        ul {
+            li {
+                width: 20%;
+            }
+        }
+    }
+
+
+   /*elementos section especificos */
+
+   //complemento fondo de seccion amamos el cafe
+    .amamosElCafe{
+        background-image: url("../images/chica.jpg");
+        background-size: cover;
+    }
+
+    //complemento fondo seccion buscas cafe
+    .buscasCafe {
+        background-image: url("../images/expreso.jpg");
+        background-size: cover;
+    }
+
+    //titulo de seccion
+    .sectionTitle {
+        text-align: center;
+    }
+
+    //contenido de seccion (titulo, texto, botones)
+    .sectionContent {
+        @include flex-column (center, center);
+    }
+
+    //contenido multimedia de seccion
+    .media {
+        grid-area: media;
+        width: 25em;
+        min-height: 20em;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    /* formularios */
+    .contactForm {
+        align-items: center;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .textInput {
+        width: 20em;
+    }
+
+    .submit {
+        width: 15em;
+    }
+}

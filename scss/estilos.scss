@@ -1,0 +1,27 @@
+//Bases
+@import "base/maps";
+@import "base/variables";
+@import "base/keyframes";
+@import "base/mixins";
+@import "base/extends";
+
+
+//Contenedor padre
+@import "components/father";
+
+//nav
+@import "components/nav";
+
+//portada
+@import "components/header";
+
+//contenido principal
+@import "components/main";
+
+//footer
+@import "components/footer";
+
+
+
+
+

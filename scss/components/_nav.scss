@@ -1,0 +1,40 @@
+/* nav */
+
+nav {
+    grid-area: nav;
+    @include flex-row(space-between , center);
+    padding: 1em 0;
+
+    //logo
+    #logo {
+        width: 20em;
+    }
+
+    .nav-link img {
+        width: 1em;
+    }
+}
+
+/* nav mobile */
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+    
+    nav {
+        margin: 0 1em;
+
+        #logo {
+            width: 15em;
+        }
+    }
+
+}
+
+/* nav tablet */
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    nav {
+        margin: 0 3em;
+    }
+
+}

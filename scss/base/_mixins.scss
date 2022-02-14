@@ -1,0 +1,130 @@
+//Estilos flex
+@mixin flex-column($justify , $align) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row($justify , $align) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+//Titulos segun dispositivo
+@mixin section-h2 ( $device ) {
+
+    font-weight: $weight-title;
+
+    //desktop
+    @if $device == "desktop" {    
+        font-size: $size-h2;
+        text-transform: uppercase;
+    }
+
+    //tablet
+    @if $device == "tablet" {
+        $size-h2: 2.5em;
+        font-size: $size-h2;
+        text-align: center;
+    }
+
+    //mobile
+    @if $device == "mobile" {
+        $size-h2: 2em;
+        font-size: $size-h2;
+        text-align: center;
+    }
+
+}
+
+@mixin section-h3 ( $device ) {
+
+    font-weight: $weight-title;
+
+    //desktop
+    @if $device == "desktop" {     
+        font-size: $size-h3;
+        text-transform: uppercase;
+    }
+
+    //tablet or mobile
+    @if $device == "tablet" or $device == "mobile" {
+        $size-h3: 1.5em;
+        font-size: $size-h3;
+        text-align: center;
+    }
+
+}
+
+//botones
+@mixin button ( $type ) {
+
+    background-color: map-get( $colors , important );
+    color: map-get( $colors , text );
+    text-align: center;
+    text-decoration: none;
+    border: none;
+
+    @if $type == "section" {
+        border-radius: .2em;
+        width: 50%;
+        min-width: 15em;
+        margin: 5% 0;
+        padding: 0.5em 0;
+    }
+
+    @if $type == "form" {
+        border-radius: 5px;
+        width: 20em;
+        padding: 10px 0;
+        margin: 1em 0;
+    }
+    
+}
+
+//layout section
+@mixin sectionMediaDevice ($type , $device) {
+
+    @if $device == "tablet" {
+
+        @if $type == "img" {
+            grid-template-areas: "titulo"
+                                 "contenido";
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 2fr;
+        }
+    
+        @if $type == "media" {
+            grid-template-areas: "titulo"
+                                 "contenido"
+                                 "media";
+            grid-template-columns: 1fr;
+            grid-template-rows: .5fr 1fr 2fr;
+        }
+    }
+
+    @if $device == "mobile" {
+
+        @if $type == "img" {
+            display: grid;
+        grid-template-areas: "titulo"
+                             "contenido";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: auto;
+        }
+    
+        @if $type == "media" {
+            grid-template-areas: "titulo"
+                                 "contenido"
+                                 "media";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        } 
+    }
+
+}
+

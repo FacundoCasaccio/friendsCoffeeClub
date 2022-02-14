@@ -1,0 +1,13 @@
+// Estilo de parrafo
+%section-p {
+    text-align: justify;
+    font-weight: $weight-p;
+    padding: 2em 0;
+}
+
+%button-animation {
+    color: map-get( $colors , text );
+    animation-name: agrandarBoton;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}

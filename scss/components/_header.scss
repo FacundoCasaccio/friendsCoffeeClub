@@ -1,0 +1,23 @@
+/* portada */
+
+header {
+    grid-area: header;
+    @include flex-row (center , center);
+    overflow: hidden;
+    min-height: 50vh;
+
+    // imagen de portada
+    img {
+        width: 100%;
+    }
+}
+
+/* portada mobile */
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    header {
+        min-height: auto;
+    }
+
+}
