@@ -1,7 +1,7 @@
 /* elementos principales */
 main {
     grid-area: main;
-    @include flex-column(space-evenly , center);
+    @include flex-column(space-evenly , normal);
     margin: 3em 0;
 
     .boton {
@@ -96,7 +96,7 @@ section {
                 border: 3.5px solid map-get($colors , comments );
 
                 &:hover {
-                    border: 3.5px solid #E9B872;
+                    border: 3.5px solid map-get($colors , important );
                     transition: .7s;
                 }
 
@@ -327,7 +327,12 @@ form {
             li {
 
                 button {
-                    border: 2px solid map-get($colors , comments );
+                    border: 3.5px solid map-get($colors , comments );
+
+                    &:hover {
+                        border: 3.5px solid map-get($colors , important );
+                        transition: .7s;
+                    }
 
                     img {
                         width: 100%;
@@ -354,8 +359,8 @@ form {
         justify-content: center;
 
         img {
-            width: 1em;
-            margin: .5em;
+            width: 8%;
+            margin: .7em;
         }
 
         p {
@@ -403,7 +408,7 @@ form {
         align-items: center;
         padding: 0 0;
 
-        h3 {
+        h2, h3 {
             text-align: center;
         }
     }

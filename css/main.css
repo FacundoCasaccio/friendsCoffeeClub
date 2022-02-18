@@ -111,7 +111,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: normal;
   margin: 3em 0; }
   main .boton {
     background-color: #E9B872;
@@ -373,7 +373,10 @@ form {
       padding: 0;
       width: 80%; }
       .sectionComments ul li button {
-        border: 2px solid #1d1d1d; }
+        border: 3.5px solid #1d1d1d; }
+        .sectionComments ul li button:hover {
+          border: 3.5px solid #E9B872;
+          transition: .7s; }
         .sectionComments ul li button img {
           width: 100%;
           min-width: 5em; }
@@ -385,8 +388,8 @@ form {
   .comments {
     justify-content: center; }
     .comments img {
-      width: 1em;
-      margin: .5em; }
+      width: 8%;
+      margin: .7em; }
     .comments p {
       width: 80%;
       text-align: justify;
@@ -413,7 +416,7 @@ form {
   .contactForm {
     align-items: center;
     padding: 0 0; }
-    .contactForm h3 {
+    .contactForm h2, .contactForm h3 {
       text-align: center; }
   .textInput {
     width: 15em; }
