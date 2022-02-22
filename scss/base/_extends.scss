@@ -5,6 +5,7 @@
     padding: 2em 0;
 }
 
+//animacion de botones
 %button-animation {
     color: map-get( $colors , text );
     animation-name: agrandarBoton;
